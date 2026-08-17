@@ -1,0 +1,327 @@
+{
+  "de_ancient": [
+    {
+      "id": "ancient-ct-spawn-1",
+      "name": "Spawn-1",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-ct/spawn-1-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-ct/spawn-1-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-ct/spawn-1-view2.jpg",
+      "throwType":"1step + Jumpthrow"
+    },
+    {
+      "id": "ancient-ct-spawn-2",
+      "name": "Spawn-2",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-ct/spawn-2-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-ct/spawn-2-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-ct/spawn-2-view2.jpg",
+      "throwType":"1step + Jumpthrow"
+    },
+    {
+      "id": "ancient-ct-spawn-3",
+      "name": "Spawn-3",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-ct/spawn-3-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-ct/spawn-3-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-ct/spawn-3-view2.jpg",
+      "throwType":"1step + Jumpthrow"
+    },
+    {
+      "id": "ancient-ct-spawn-4",
+      "name": "Spawn-4",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-ct/spawn-4-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-ct/spawn-4-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-ct/spawn-4-view2.jpg",
+      "throwType":"1step + Jumpthrow"
+    },
+    {
+      "id": "ancient-ct-spawn-5",
+      "name": "Spawn-5",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-ct/spawn-5-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-ct/spawn-5-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-ct/spawn-5-view2.jpg",
+      "throwType":"1step + Jumpthrow"
+    },
+    {
+      "id": "ancient-t-spawn-2",
+      "name": "Spawn-2",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-t/spawn-2-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-t/spawn-2-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-t/spawn-2-view2.jpg",
+      "throwType":"W + Jumpthrow"
+    },
+    {
+      "id": "ancient-t-spawn-3",
+      "name": "Spawn-1",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-t/spawn-3-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-t/spawn-3-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-t/spawn-3-view2.jpg",
+      "throwType":"W + Jumpthrow"
+    },
+    {
+      "id": "ancient-t-spawn-5",
+      "name": "Spawn-3",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_ancient/spawn-t/spawn-5-aim.jpg",
+      "spawnView1Image": "de_ancient/spawn-t/spawn-5-view1.jpg",
+      "spawnView2Image": "de_ancient/spawn-t/spawn-5-view2.jpg",
+      "throwType":"W + Jumpthrow"
+    }
+  ],
+  "de_anubis": [
+    {
+      "id": "anubis-t-spawn-1",
+      "name": "Spawn-1",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-1-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-1-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-1-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-2",
+      "name": "Spawn-2",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-2-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-2-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-2-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-3",
+      "name": "Spawn-3",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-3-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-3-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-3-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-4",
+      "name": "Spawn-4",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-4-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-4-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-4-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-5",
+      "name": "Spawn-5",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-5-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-5-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-5-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-6",
+      "name": "Spawn-6",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-6-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-6-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-6-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-7",
+      "name": "Spawn-7",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-7-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-7-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-7-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-8",
+      "name": "Spawn-8",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-8-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-8-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-8-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-9",
+      "name": "Spawn-9",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-9-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-9-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-9-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-10",
+      "name": "Spawn-10",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-10-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-10-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-10-view2.jpg"
+    },
+    {
+      "id": "anubis-t-spawn-11",
+      "name": "Spawn-11",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-t/spawn-11-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-t/spawn-11-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-t/spawn-11-view2.jpg"
+    },
+    {
+      "id": "anubis-ct-spawn-1",
+      "name": "Spawn-1",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-ct/spawn-1-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-ct/spawn-1-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-ct/spawn-1-view2.jpg"
+    },
+    {
+      "id": "anubis-ct-spawn-2",
+      "name": "Spawn-2",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-ct/spawn-2-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-ct/spawn-2-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-ct/spawn-2-view2.jpg"
+    },
+    {
+      "id": "anubis-ct-spawn-3",
+      "name": "Spawn-3",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-ct/spawn-3-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-ct/spawn-3-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-ct/spawn-3-view2.jpg"
+    },
+    {
+      "id": "anubis-ct-spawn-4",
+      "name": "Spawn-4",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_anubis/spawn-ct/spawn-4-aim.jpg",
+      "spawnView1Image": "de_anubis/spawn-ct/spawn-4-view1.jpg",
+      "spawnView2Image": "de_anubis/spawn-ct/spawn-4-view2.jpg"
+    }
+  ],
+  "de_cache": [],
+  "de_dust2": [],
+  "de_inferno": [
+    {
+      "id": "inferno-ct-spawn-1",
+      "name": "Spawn-1",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_inferno/spawn-ct/spawn-1-aim.jpg",
+      "spawnView1Image": "de_inferno/spawn-ct/spawn-1-view1.jpg",
+      "spawnView2Image": "de_inferno/spawn-ct/spawn-1-view2.jpg"
+    },
+    {
+      "id": "inferno-ct-spawn-2",
+      "name": "Spawn-2",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_inferno/spawn-ct/spawn-2-aim.jpg",
+      "spawnView1Image": "de_inferno/spawn-ct/spawn-2-view1.jpg",
+      "spawnView2Image": "de_inferno/spawn-ct/spawn-2-view2.jpg"
+    },
+    {
+      "id": "inferno-ct-spawn-3",
+      "name": "Spawn-3",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_inferno/spawn-ct/spawn-3-aim.jpg",
+      "spawnView1Image": "de_inferno/spawn-ct/spawn-3-view1.jpg",
+      "spawnView2Image": "de_inferno/spawn-ct/spawn-3-view2.jpg"
+    },
+    {
+      "id": "inferno-ct-spawn-4",
+      "name": "Spawn-4",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_inferno/spawn-ct/spawn-4-aim.jpg",
+      "spawnView1Image": "de_inferno/spawn-ct/spawn-4-view1.jpg",
+      "spawnView2Image": "de_inferno/spawn-ct/spawn-4-view2.jpg"
+    },
+    {
+      "id": "inferno-ct-spawn-5",
+      "name": "Spawn-5",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_inferno/spawn-ct/spawn-5-aim.jpg",
+      "spawnView1Image": "de_inferno/spawn-ct/spawn-5-view1.jpg",
+      "spawnView2Image": "de_inferno/spawn-ct/spawn-5-view2.jpg"
+    },
+    {
+      "id": "inferno-ct-spawn-6",
+      "name": "Spawn-6",
+      "side": "CT",
+      "type": "smoke",
+      "aimImage": "de_inferno/spawn-ct/spawn-6-aim.jpg",
+      "spawnView1Image": "de_inferno/spawn-ct/spawn-6-view1.jpg",
+      "spawnView2Image": "de_inferno/spawn-ct/spawn-6-view2.jpg"
+    }
+  ],
+  "de_mirage": [
+    {
+      "id": "mirage-t-spawn-1",
+      "name": "Spawn-1",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_mirage/spawn/spawn-1-aim.jpg",
+      "spawnView1Image": "de_mirage/spawn/spawn-1-view1.jpg",
+      "spawnView2Image": "de_mirage/spawn/spawn-1-view2.jpg"
+    },
+    {
+      "id": "mirage-t-spawn-2",
+      "name": "Spawn-2",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_mirage/spawn/spawn-2-aim.jpg",
+      "spawnView1Image": "de_mirage/spawn/spawn-2-view1.jpg",
+      "spawnView2Image": "de_mirage/spawn/spawn-2-view2.jpg"
+    },
+    {
+      "id": "mirage-t-spawn-3",
+      "name": "Spawn-3",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_mirage/spawn/spawn-3-aim.jpg",
+      "spawnView1Image": "de_mirage/spawn/spawn-3-view1.jpg",
+      "spawnView2Image": "de_mirage/spawn/spawn-3-view2.jpg"
+    },
+    {
+      "id": "mirage-t-spawn-4",
+      "name": "Spawn-4",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_mirage/spawn/spawn-4-aim.jpg",
+      "spawnView1Image": "de_mirage/spawn/spawn-4-view1.jpg",
+      "spawnView2Image": "de_mirage/spawn/spawn-4-view2.jpg"
+    },
+    {
+      "id": "mirage-t-spawn-5",
+      "name": "Spawn-5",
+      "side": "T",
+      "type": "smoke",
+      "aimImage": "de_mirage/spawn/spawn-5-aim.jpg",
+      "spawnView1Image": "de_mirage/spawn/spawn-5-view1.jpg",
+      "spawnView2Image": "de_mirage/spawn/spawn-5-view2.jpg"
+    }
+  ],
+  "de_nuke": []
+}

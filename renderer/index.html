@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lineup Overlay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="panel">
+
+    <!-- Draggable header / tab -->
+    <div id="header" class="header">
+      <div class="header-corner tl"></div>
+      <div class="header-corner tr"></div>
+      <div class="header-main">
+        <span class="dot" id="status-dot"></span>
+        <span class="header-title">LINEUPS</span>
+        <span class="header-map" id="map-label">NO MAP</span>
+      </div>
+      <button id="toggle-btn" class="toggle-btn" title="Show / hide lineup list (F9)">▾</button>
+    </div>
+
+    <div id="gsi-banner" class="gsi-banner" hidden>
+      <span id="gsi-banner-text"></span>
+      <button id="gsi-fix-btn" class="mini-btn" hidden>SET FOLDER</button>
+    </div>
+
+    <div id="update-banner" class="update-banner" hidden>
+      <span id="update-banner-text"></span>
+      <button id="update-restart-btn" class="mini-btn" hidden>RESTART</button>
+    </div>
+
+    <div id="hotkey-banner" class="gsi-banner warn" hidden>
+      <span id="hotkey-banner-text"></span>
+    </div>
+
+    <!-- Body: list view + detail view -->
+    <div id="body" class="body">
+
+      <div id="list-view" class="view">
+
+        <!-- Shown only while no map has been auto-detected yet -->
+        <div id="map-picker" class="map-picker" hidden>
+          <div class="picker-hint">No map detected yet — pick one to browse manually. This will switch back to automatic once CS2 reports a map.</div>
+          <div id="map-picker-buttons" class="map-picker-buttons"></div>
+        </div>
+
+        <!-- Shown only when the current map was picked manually - lets you
+             go back and pick a different one -->
+        <div id="change-map-row" class="change-map-row" hidden>
+          <button id="change-map-btn" class="mini-btn">↺ CHANGE MAP</button>
+        </div>
+
+        <div class="filter-row" id="filter-row" hidden>
+          <button class="filter-btn active" data-type="all">ALL</button>
+          <button class="filter-btn" data-type="smoke">SMOKE</button>
+          <button class="filter-btn" data-type="flash">FLASH MOL</button>
+          <button class="filter-btn spawn-tab-btn" data-type="spawn">SPAWN SMOKE</button>
+        </div>
+
+        <!-- Shared T/CT side toggle - applies to whichever tab is active.
+             Defaults to your detected team (via GSI) but you can always
+             manually switch to look at the other side. -->
+        <div class="side-toggle" id="side-toggle" hidden>
+          <button class="side-btn active" data-side="T">T SIDE</button>
+          <button class="side-btn" data-side="CT">CT SIDE</button>
+        </div>
+
+        <!-- Area filter - only applies to ALL/SMOKE/FLASH MOL (not Spawn
+             Smoke, which isn't zone-based). Filters by the `area` field on
+             a lineup entry. -->
+        <div class="area-row" id="area-row" hidden>
+          <button class="area-btn active" data-area="all">ALL</button>
+          <button class="area-btn" data-area="a-site">A-SITE</button>
+          <button class="area-btn" data-area="mid">MID</button>
+          <button class="area-btn" data-area="b-site">B-SITE</button>
+        </div>
+
+        <!-- Regular ALL/SMOKE/FLASH MOL lineup list -->
+        <div id="lineup-list" class="lineup-list"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          No lineups saved for this map yet.<br />Add some in <code>data/lineups.json</code>.
+        </div>
+
+        <!-- Spawn Smoke tab content -->
+        <div id="spawn-tab" class="spawn-tab" hidden>
+          <div class="image-frame spawn-overview-frame" id="spawn-overview-frame"></div>
+          <div id="spawn-no-image-text" class="spawn-no-image-text" hidden>
+            There is no spawn smoke in this side.
+          </div>
+          <div id="spawn-entry-list" class="lineup-list"></div>
+        </div>
+      </div>
+
+      <div id="detail-view" class="view" hidden>
+        <button id="back-btn" class="back-btn">‹ BACK</button>
+        <div class="detail-name" id="detail-name"></div>
+
+        <div class="image-block">
+          <div class="image-row">
+            <div class="image-label" id="slot1-label">STAND HERE</div>
+            <span id="slot1-badge" class="throw-badge" hidden></span>
+            <span id="slot1-extra" class="extra-note" hidden></span>
+            <button class="zoom-btn" data-slot="1" data-action="zoom">🔍 ZOOM</button>
+          </div>
+          <div class="image-frame" id="slot1-frame"></div>
+        </div>
+
+        <div class="image-block">
+          <div class="image-row">
+            <div class="image-label" id="slot2-label">EXACT SPOT</div>
+            <span id="slot2-badge" class="throw-badge" hidden></span>
+            <span id="slot2-extra" class="extra-note" hidden></span>
+            <button class="zoom-btn" data-slot="2" data-action="zoom">🔍 ZOOM</button>
+          </div>
+          <div class="image-frame" id="slot2-frame"></div>
+        </div>
+
+        <div class="image-block">
+          <div class="image-row">
+            <div class="image-label" id="slot3-label">AIM HERE</div>
+            <span id="slot3-badge" class="throw-badge" hidden></span>
+            <span id="slot3-extra" class="extra-note" hidden></span>
+            <button class="zoom-btn" data-slot="3" data-action="zoom">🔍 ZOOM</button>
+          </div>
+          <div class="image-frame" id="slot3-frame"></div>
+        </div>
+
+        <!-- Shown only when this lineup shares a positionGroup with others -
+             lets you see every other throw available from the same spot
+             without backing out to the list. -->
+        <div id="same-position-section" class="same-position-section" hidden>
+          <div class="same-position-label">📍 SAME SPOT — OTHER THROWS FROM HERE</div>
+          <div id="same-position-scroll" class="same-position-scroll"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="footer-key"><span class="key">F9</span> show / hide overlay</div>
+      <div class="footer-key"><span class="key">F8</span> mouse capture toggle</div>
+      <div class="footer-key"><span class="key">ESC</span> press to unlock cursor</div>
+    </div>
+
+    <!-- Persistent, remotely-controlled ad slot. Its size adapts to
+         whatever creative is currently playing (see ads-config.js /
+         ads.js) - it is never hidden, even when the panel is collapsed. -->
+    <div class="ad-slot">
+      <div class="ad-slot-inner" id="ad-slot-inner">
+        <span class="ad-slot-label">AD</span>
+        <span class="ad-slot-placeholder">Ad space — configure ads-config.js</span>
+      </div>
+    </div>
+
+    <!-- One-time analytics consent screen. Skipped entirely if the
+         Windows installer already recorded consent during setup - see
+         build/installer.nsh. Otherwise shown once ever, on first run. -->
+    <div id="consent-overlay" class="consent-overlay" hidden>
+      <div class="consent-box">
+        <div class="consent-title">BEFORE WE START</div>
+        <p class="consent-text">
+          This app can send anonymous usage stats (installs, sessions,
+          country/language) to help the developer improve it. No personal
+          info, no gameplay data, no IP address is stored.
+          <a id="consent-privacy-link">What exactly is collected?</a>
+        </p>
+        <div class="consent-actions">
+          <button id="consent-decline" class="consent-btn secondary">NO THANKS</button>
+          <button id="consent-agree" class="consent-btn primary">AGREE & CONTINUE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

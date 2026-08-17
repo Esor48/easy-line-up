@@ -1,0 +1,29 @@
+CS2 Lineup Overlay - License & Data Notice
+============================================
+
+USE
+This software is provided free of charge, "as is", without warranty of
+any kind. By installing it, you agree to use it at your own risk.
+
+ANONYMOUS USAGE ANALYTICS
+This app can send anonymous usage statistics (app installed, app
+opened/closed, session duration) to help the developer understand usage
+and improve the app. Specifically:
+
+  - A random anonymous install ID (not tied to your name, email, Steam
+    ID, or any personal identifier)
+  - Country, derived server-side from your IP address at the moment of
+    the request - your raw IP address is never stored
+  - Your OS language setting (e.g. "en-US")
+  - App version and operating system
+
+This does NOT include your name, email, Steam ID, in-game identity, IP
+address, gameplay data, lineup content, or anything you type into the app.
+
+By clicking "I Agree" below, you consent to this anonymous data
+collection. You can review the full details anytime in PRIVACY.md,
+included with this app, or decline during install by choosing the
+"decline analytics" option in Windows Setup if available, or by
+selecting "No Thanks" in the app itself if this screen was skipped.
+
+Click I Agree to continue installing CS2 Lineup Overlay.

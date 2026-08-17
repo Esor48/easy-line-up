@@ -1,0 +1,17 @@
+{
+  "de_mirage": {
+    "T": "de_mirage/spawn-overview-t.png",
+    "CT": "de_mirage/spawn-overview-ct.png"
+  },
+  "de_ancient": {
+    "T": "de_ancient/spawn-overview-t.png",
+    "CT": "de_ancient/spawn-overview-ct.png"
+  },
+  "de_anubis": {
+    "CT": "de_anubis/spawn-overview-ct.png",
+    "T": "de_anubis/spawn-overview-t.png"
+  },
+  "de_inferno": {
+    "CT": "de_inferno/spawn-overview-ct.png"
+  }
+}

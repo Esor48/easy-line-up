@@ -1,0 +1,28 @@
+{
+  "ads": [
+    {
+      "type": "image",
+      "url": "https://example.com/ads/banner1.jpg",
+      "width": 300,
+      "height": 250,
+      "durationSeconds": 8,
+      "clickUrl": "https://example.com"
+    },
+    {
+      "type": "gif",
+      "url": "https://example.com/ads/banner2.gif",
+      "width": 320,
+      "height": 50,
+      "durationSeconds": 6,
+      "clickUrl": "https://example.com"
+    },
+    {
+      "type": "video",
+      "url": "https://example.com/ads/banner3.mp4",
+      "width": 300,
+      "height": 169,
+      "durationSeconds": 10,
+      "clickUrl": "https://example.com"
+    }
+  ]
+}
