@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy — Easy Line Up</title>
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="shortcut icon" href="assets/favicon.ico" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<style>
+  .doc { max-width: 720px; padding: 72px 24px 100px; }
+  .doc h1 { font-size: clamp(32px, 5vw, 44px); margin-bottom: 12px; }
+  .doc .updated { font-family: var(--mono); font-size: 12px; color: var(--text-muted); margin-bottom: 48px; display: block; }
+  .doc h2 { font-size: 22px; margin-top: 48px; margin-bottom: 16px; }
+  .doc p { color: var(--text-muted); font-size: 15.5px; line-height: 1.75; margin-bottom: 16px; }
+  .doc a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+  .data-table th {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border-soft);
+  }
+  .data-table td { padding: 12px; border-bottom: 1px solid var(--border-soft); color: var(--text-muted); vertical-align: top; }
+  .data-table td:first-child { color: var(--text); font-weight: 500; }
+  .doc ul { color: var(--text-muted); font-size: 15.5px; line-height: 1.8; padding-left: 22px; }
+  .back-link { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark">
+      <img src="data:image/png;base64,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" alt="" class="wordmark-icon" />
+      <span>EASY LINE UP</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how-it-works">Setup</a>
+      <a href="privacy.html">Privacy</a>
+      <a id="nav-download" class="nav-download-btn" href="#" target="_blank" rel="noopener">⬇ Download</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc" style="margin: 0 auto;">
+  <a href="index.html" class="back-link">← Back to Easy Line Up</a>
+  <h1 style="margin-top: 24px;">Privacy &amp; Data Collection</h1>
+  <span class="updated">What the app collects, in plain terms.</span>
+
+  <p>
+    Easy Line Up can optionally send anonymous, aggregate usage statistics.
+    This isn't hidden in fine print — here's exactly what that means.
+  </p>
+
+  <p>
+    <strong style="color: var(--text);">How you decide:</strong> if you installed
+    via the Windows installer, you saw this notice during Setup and your
+    choice there is final — no separate in-app prompt appears. If you got
+    the app another way, a short one-time screen appears on first launch
+    instead, with Agree / No Thanks buttons. Either way, nothing changes
+    after that first decision — there's no ongoing tracking toggle to manage.
+  </p>
+
+  <h2>What is collected</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Data</th><th>How</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>App installed</td><td>One-time event on first launch ever</td><td>Detected locally, not tied to your Steam/CS2 account</td></tr>
+      <tr><td>App opened / closed</td><td>Each time you start/quit the app</td><td>Used to calculate session duration</td></tr>
+      <tr><td>Session duration</td><td>Calculated from open → close timestamps</td><td>—</td></tr>
+      <tr><td>Anonymous install ID</td><td>A random ID generated on first launch, stored only on your device</td><td>Not your name, email, Steam ID, or any other personal identifier</td></tr>
+      <tr><td>Country</td><td>Derived server-side from your IP at the moment of the request</td><td>We never see or store your raw IP address ourselves</td></tr>
+      <tr><td>Language</td><td>Your OS's locale setting (e.g. en-US)</td><td>Not your typed/spoken language, just a system setting</td></tr>
+      <tr><td>App version, OS platform</td><td>Standard app diagnostics</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What is NOT collected</h2>
+  <ul>
+    <li>Your name, email, Steam ID, or CS2 in-game identity</li>
+    <li>Your IP address (discarded after deriving country)</li>
+    <li>Anything about your gameplay, aim, position, or in-match behavior</li>
+    <li>Any of your lineup content, notes, or images</li>
+    <li>Anything typed into the app</li>
+  </ul>
+
+  <h2>Where it goes</h2>
+  <p>
+    Events are sent to <a href="https://posthog.com" target="_blank" rel="noopener">PostHog</a>,
+    a third-party analytics service, over HTTPS. Their own privacy policy
+    governs how they handle data in transit and at rest:
+    <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a>.
+  </p>
+
+  <h2>Questions</h2>
+  <p>
+    If you have questions about this, email
+    <a href="mailto:easylineup.org@gmail.com">easylineup.org@gmail.com</a>,
+    or reach out via the
+    <a id="issues-link" href="#" target="_blank" rel="noopener">GitHub repository</a>.
+  </p>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="wordmark footer-wordmark">
+      <img src="assets/icon.png" alt="" class="wordmark-icon" />
+      <span>EASY LINE UP</span>
+    </a>
+    <nav class="nav-links footer-nav">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how-it-works">Setup</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <span class="footer-copyright">© 2026 Easy Line Up</span>
+  </div>
+  <div class="footer-bottom">
+    <span>Easy Line Up isn't affiliated with Valve or Counter-Strike 2.</span>
+    <a href="mailto:easylineup.org@gmail.com">easylineup.org@gmail.com</a>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+  (function () {
+    const { GITHUB_OWNER, GITHUB_REPO } = SITE_CONFIG;
+    const configured = GITHUB_OWNER && !GITHUB_OWNER.startsWith('YOUR_');
+    const url = configured ? `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}` : 'https://github.com';
+    const el = document.getElementById('issues-link');
+    if (el) el.href = `${url}/issues`;
+  })();
+</script>
+</body>
+</html>
